@@ -1,0 +1,15 @@
+# Generated browser-check screenshots
+*-check.png
+portfolio-*.png
+jobconnect-*.png
+bekastok-case-*.png
+bekastok-scenario.png
+
+# Large files that should be uploaded as GitHub Release assets instead
+release-assets/
+docs/*.pdf
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.vscode/
