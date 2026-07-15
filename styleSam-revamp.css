@@ -1096,6 +1096,11 @@ button:hover .roll-text span:last-child {
     color: rgba(17, 17, 15, 0.68);
 }
 
+.timeline-item__content h3 {
+    font-size: clamp(1.25rem, 2vw, 1.55rem);
+    line-height: 1.08;
+}
+
 .timeline-item__content ul {
     display: flex;
     flex-wrap: wrap;
@@ -1157,6 +1162,10 @@ button:hover .roll-text span:last-child {
 .project-card--outline {
     background: var(--bone);
     color: var(--ink);
+}
+
+.project-card--churn {
+    background: #fbf4e8;
 }
 
 .project-visual {
@@ -1280,6 +1289,70 @@ button:hover .roll-text span:last-child {
     background: linear-gradient(135deg, rgba(216, 83, 49, 0.4), transparent 58%), #617257;
 }
 
+.project-visual--telehealth {
+    place-items: center;
+    align-content: center;
+    min-height: 310px;
+    color: #a7efe5;
+    background:
+        radial-gradient(circle at 16% 14%, rgba(167, 239, 229, 0.28), transparent 30%),
+        radial-gradient(circle at 84% 80%, rgba(216, 83, 49, 0.22), transparent 28%),
+        linear-gradient(145deg, #163f3c, #617257);
+    border-bottom-color: rgba(167, 239, 229, 0.18);
+}
+
+.project-visual--telehealth::before {
+    border-color: rgba(245, 239, 229, 0.2);
+    opacity: 0.55;
+}
+
+.telehealth-carousel {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 330px);
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid rgba(245, 239, 229, 0.22);
+    border-radius: 16px;
+    background: #f4faf8;
+    box-shadow: 0 22px 54px rgba(13, 36, 34, 0.34);
+}
+
+.telehealth-shot {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: #f4faf8;
+    opacity: 0;
+    transform: scale(0.985);
+    animation: telehealth-showcase 32s infinite;
+    animation-delay: calc(var(--slide) * 4s);
+}
+
+.js .project-card--telehealth:not(.is-visible) .telehealth-shot {
+    animation-play-state: paused;
+}
+
+.telehealth-sequence {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    z-index: 3;
+    display: flex;
+    gap: 5px;
+}
+
+.telehealth-sequence i {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(245, 239, 229, 0.52);
+}
+
 .project-visual--blue {
     color: var(--gold);
     background: linear-gradient(135deg, rgba(198, 164, 90, 0.42), transparent 58%), #183f94;
@@ -1353,6 +1426,99 @@ button:hover .roll-text span:last-child {
     color: var(--oxide);
     background: linear-gradient(135deg, rgba(198, 164, 90, 0.38), transparent 58%), #fffaf2;
     border-bottom-color: rgba(17, 17, 15, 0.14);
+}
+
+.project-visual--churn {
+    place-items: center;
+    align-content: center;
+    min-height: 310px;
+    color: #11110f;
+    background:
+        radial-gradient(circle at 18% 18%, rgba(242, 196, 64, 0.24), transparent 30%),
+        radial-gradient(circle at 84% 80%, rgba(37, 94, 216, 0.2), transparent 28%),
+        linear-gradient(145deg, #fff7e7, #f5e6c8);
+}
+
+.project-visual--churn::before {
+    border-color: rgba(17, 17, 15, 0.18);
+    opacity: 0.85;
+}
+
+.churn-card-slideshow {
+    position: relative;
+    z-index: 2;
+    width: min(92%, 440px);
+    aspect-ratio: 16 / 9;
+    border: 1px solid rgba(17, 17, 15, 0.16);
+    border-radius: 16px;
+    background: rgba(255, 252, 244, 0.92);
+    box-shadow: 0 22px 54px rgba(76, 50, 12, 0.18);
+    overflow: hidden;
+}
+
+.churn-card-shot {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: #fffaf0;
+    opacity: 0;
+    transform: scale(1.015);
+    animation: churn-card-slide 8s infinite;
+    animation-delay: calc(var(--slide) * 4s);
+}
+
+.churn-card-dots {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.churn-card-dots i {
+    width: 34px;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(17, 17, 15, 0.22);
+    animation: churn-card-dot 8s infinite;
+    animation-delay: calc(var(--slide, 0) * 4s);
+}
+
+.churn-card-dots i:nth-child(1) {
+    --slide: 0;
+}
+
+.churn-card-dots i:nth-child(2) {
+    --slide: 1;
+}
+
+@keyframes churn-card-slide {
+    0%,
+    45% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+        transform: scale(1.015);
+    }
+}
+
+@keyframes churn-card-dot {
+    0%,
+    45% {
+        background: #255ed8;
+    }
+
+    50%,
+    100% {
+        background: rgba(17, 17, 15, 0.22);
+    }
 }
 
 .project-card__body {
@@ -1457,9 +1623,25 @@ button:hover .roll-text span:last-child {
     border-color: var(--paper);
 }
 
+.project-card--outline .project-action {
+    color: var(--ink);
+    border-color: rgba(17, 17, 15, 0.18);
+    background: rgba(255, 255, 255, 0.34);
+}
+
+.project-card--outline .project-action--primary {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+}
+
 .project-action--primary:hover {
     transform: translateY(-2px);
     background: #fff;
+}
+
+.project-card--outline .project-action--primary:hover {
+    background: #000;
 }
 
 .project-action--disabled {
@@ -1690,6 +1872,36 @@ button:hover .roll-text span:last-child {
     border: 8px solid #11110f;
 }
 
+.case-hero__media--bekastok .case-hero__brand,
+.case-hero__media--bekastok .case-hero__phone {
+    transition: transform 360ms ease, box-shadow 360ms ease, filter 360ms ease;
+    will-change: transform;
+}
+
+.case-hero__media--bekastok:hover .case-hero__brand {
+    transform: translateY(-12px) rotate(1.5deg) scale(1.025);
+    filter: saturate(1.08);
+    box-shadow: 0 38px 110px rgba(17, 17, 15, 0.24);
+}
+
+.case-hero__media--bekastok:hover .case-hero__phone {
+    transform: translate(16px, -22px) rotate(-3deg) scale(1.04);
+    filter: saturate(1.08);
+    box-shadow: 0 34px 95px rgba(17, 17, 15, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .case-hero__media--bekastok .case-hero__brand,
+    .case-hero__media--bekastok .case-hero__phone {
+        transition: none;
+    }
+
+    .case-hero__media--bekastok:hover .case-hero__brand,
+    .case-hero__media--bekastok:hover .case-hero__phone {
+        transform: none;
+    }
+}
+
 .case-study-page--jobconnect {
     --jobconnect-ink: #160a28;
     --jobconnect-purple: #4f1d7d;
@@ -1734,8 +1946,414 @@ button:hover .roll-text span:last-child {
     line-height: 1;
 }
 
+.case-study-page--telehealth {
+    --telehealth-deep: #163f3c;
+    --telehealth-green: #617257;
+    --telehealth-mint: #a7efe5;
+}
+
+.case-study-page--telehealth .case-status {
+    background: rgba(97, 114, 87, 0.12);
+    color: var(--telehealth-deep);
+}
+
+.case-study-page--telehealth .case-hero h1 {
+    font-size: clamp(3.65rem, 5.35vw, 5.9rem);
+}
+
+.case-study-page--telehealth .case-section--scenario .case-section__grid {
+    grid-template-columns: minmax(280px, 0.48fr) minmax(0, 1.42fr);
+    gap: clamp(72px, 8vw, 118px);
+}
+
+.case-study-page--telehealth .case-section--scenario .case-section__heading h2 {
+    max-width: 360px;
+    font-size: clamp(2rem, 2.5vw, 2.8rem);
+    line-height: 1;
+}
+
+.case-study-page--telehealth .case-section--stack .case-section__grid {
+    grid-template-columns: minmax(230px, 0.42fr) minmax(0, 1.58fr);
+    gap: clamp(88px, 8vw, 130px);
+}
+
+.case-study-page--telehealth .case-section--stack .case-section__heading h2 {
+    max-width: 330px;
+    font-size: clamp(1.9rem, 2.35vw, 2.65rem);
+    line-height: 1;
+}
+
+.case-study-page--telehealth .case-section--process {
+    padding-bottom: 56px;
+}
+
+.case-study-page--telehealth .case-section--stack {
+    padding-top: 50px;
+    padding-bottom: 48px;
+}
+
+.case-study-page--telehealth .case-section--stack + #demo {
+    padding-top: 52px;
+}
+
+.case-study-page--telehealth .case-section--stack .case-stack-layout {
+    padding-top: 8px;
+}
+
+.case-study-page--telehealth .case-section--stack .case-stack-intro {
+    margin-bottom: 30px;
+}
+
+.case-study-page--telehealth .case-role-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.case-study-page--telehealth .case-role-card {
+    min-height: 390px;
+}
+
+.case-hero__media--telehealth {
+    min-height: 560px;
+}
+
+.case-study-page--telehealth .case-hero__browser {
+    background: #f4faf8;
+    border-color: rgba(97, 114, 87, 0.2);
+    transition: transform 360ms ease, box-shadow 360ms ease, border-color 360ms ease;
+    will-change: transform;
+}
+
+.case-study-page--telehealth .case-hero__media--telehealth:hover .case-hero__browser:not(.case-hero__browser--float) {
+    transform: translateY(-12px) rotate(1deg) scale(1.02);
+    border-color: rgba(22, 63, 60, 0.28);
+    box-shadow: 0 38px 100px rgba(22, 63, 60, 0.22);
+}
+
+.case-study-page--telehealth .case-hero__media--telehealth:hover .case-hero__browser--float {
+    transform: translate(-14px, -18px) rotate(-1deg) scale(1.035);
+    border-color: rgba(22, 63, 60, 0.32);
+    box-shadow: 0 34px 90px rgba(22, 63, 60, 0.28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .case-study-page--telehealth .case-hero__browser {
+        transition: none;
+    }
+
+    .case-study-page--telehealth .case-hero__media--telehealth:hover .case-hero__browser:not(.case-hero__browser--float) {
+        transform: none;
+    }
+
+    .case-study-page--telehealth .case-hero__media--telehealth:hover .case-hero__browser--float {
+        transform: rotate(-3deg);
+    }
+}
+
+.case-study-page--telehealth .section-accent {
+    background:
+        radial-gradient(circle at 12% 16%, rgba(167, 239, 229, 0.2), transparent 30%),
+        linear-gradient(135deg, #163f3c, #617257);
+    color: var(--paper);
+}
+
+.case-study-page--telehealth .section-accent .eyebrow,
+.case-study-page--telehealth .section-accent .case-section__body p,
+.case-study-page--telehealth .section-accent .large-copy {
+    color: rgba(245, 239, 229, 0.78);
+}
+
+.case-study-page--telehealth .section-accent .case-section__heading h2 {
+    color: var(--paper);
+}
+
+.case-study-page--telehealth .section-accent .case-panel {
+    background: rgba(245, 239, 229, 0.9);
+    color: var(--ink);
+}
+
+.case-study-page--telehealth .section-accent .case-panel h2 {
+    font-size: clamp(2.15rem, 3.15vw, 3.45rem);
+    line-height: 1.02;
+}
+
+.case-study-page--telehealth .section-accent .case-panel p {
+    color: rgba(17, 17, 15, 0.72);
+}
+
+.case-study-page--telehealth .case-gallery--web img {
+    background: #f4faf8;
+}
+
+.case-study-page--churn {
+    --churn-blue: #255ed8;
+    --churn-gold: #f2c440;
+    --churn-red: #d85331;
+}
+
+.case-study-page--churn .case-status {
+    background: rgba(242, 196, 64, 0.18);
+    color: #5f4610;
+}
+
+.case-study-page--churn .case-hero h1 {
+    max-width: 900px;
+    font-size: clamp(3rem, 4.75vw, 5.4rem);
+}
+
+.case-study-page--churn .case-section--overview {
+    padding-bottom: 54px;
+}
+
+.case-study-page--churn .case-section--overview + .case-section {
+    padding-top: 46px;
+}
+
+.case-study-page--churn .case-section--stack .case-section__grid {
+    grid-template-columns: minmax(260px, 0.55fr) minmax(0, 1.45fr);
+}
+
+.case-study-page--churn .case-section--stack .case-section__heading h2 {
+    max-width: 360px;
+    font-size: clamp(2.25rem, 3.05vw, 3.3rem);
+    line-height: 1;
+}
+
+.case-study-page--churn .case-stack-cards article {
+    min-height: 190px;
+}
+
+.case-study-page--churn .case-stack-cards article:nth-child(5) {
+    grid-column: 1 / -1;
+    min-height: 170px;
+}
+
+.case-study-page--churn .case-stack-cards article:nth-child(5) p {
+    max-width: 760px;
+}
+
+.case-study-page--churn .case-panel h2 {
+    font-size: clamp(2.05rem, 3.15vw, 3.35rem);
+    line-height: 1.02;
+}
+
+.case-study-page--churn .case-panel p {
+    font-size: 1.08rem;
+    line-height: 1.78;
+}
+
+.case-hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.case-hero-tags span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 0 12px;
+    border: 1px solid rgba(17, 17, 15, 0.14);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.42);
+    color: rgba(17, 17, 15, 0.7);
+    font-size: 0.76rem;
+    font-weight: 900;
+}
+
+.case-hero__media--churn {
+    min-height: 520px;
+    display: grid;
+    place-items: center;
+}
+
+.case-churn-hero-card {
+    width: min(100%, 560px);
+    padding: clamp(20px, 3vw, 30px);
+    border: 1px solid rgba(17, 17, 15, 0.14);
+    border-radius: var(--radius-card);
+    background:
+        radial-gradient(circle at 88% 12%, rgba(37, 94, 216, 0.16), transparent 30%),
+        linear-gradient(145deg, #fffaf0, #f5e6c8);
+    box-shadow: 0 30px 90px rgba(76, 50, 12, 0.2);
+}
+
+.case-churn-hero-card__header {
+    display: grid;
+    justify-items: start;
+    gap: 6px;
+}
+
+.case-churn-hero-card__header span,
+.case-churn-hero-card__kpis span,
+.case-dashboard-card > div:last-child > span {
+    color: var(--churn-red);
+    font-size: 0.78rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.case-churn-hero-card__header strong {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.35vw, 1.9rem);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.case-churn-hero-card__kpis {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.case-churn-hero-card__kpis article {
+    min-height: 96px;
+    padding: 16px;
+    border: 1px solid rgba(17, 17, 15, 0.12);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.58);
+}
+
+.case-churn-hero-card__kpis strong {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    font-weight: 900;
+}
+
+.case-churn-hero-card__chart {
+    display: grid;
+    align-items: end;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+    min-height: 230px;
+    margin-top: 18px;
+    padding: 18px;
+    border: 1px solid rgba(17, 17, 15, 0.12);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.48);
+}
+
+.case-churn-hero-card__chart i {
+    height: var(--bar);
+    border-radius: 999px 999px 10px 10px;
+    background: linear-gradient(180deg, var(--churn-blue), var(--churn-gold));
+}
+
+.case-dashboard-grid {
+    display: grid;
+    gap: 18px;
+}
+
+.case-dashboard-card {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.95fr) minmax(0, 1.05fr);
+    gap: 24px;
+    align-items: center;
+    padding: clamp(18px, 3vw, 28px);
+    border: 1px solid rgba(245, 239, 229, 0.16);
+    border-radius: var(--radius-card);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dashboard-shot-placeholder {
+    display: grid;
+    place-items: center;
+    min-height: 280px;
+    border: 1px dashed rgba(245, 239, 229, 0.28);
+    border-radius: 18px;
+    background:
+        linear-gradient(135deg, rgba(37, 94, 216, 0.16), transparent),
+        rgba(245, 239, 229, 0.05);
+}
+
+.dashboard-shot {
+    overflow: hidden;
+    border: 1px solid rgba(245, 239, 229, 0.16);
+    border-radius: 18px;
+    background: #f7f2e8;
+    box-shadow: 0 22px 58px rgba(0, 0, 0, 0.22);
+}
+
+.dashboard-shot img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    object-position: center;
+    background: #f7f2e8;
+}
+
+.dashboard-shot-placeholder i {
+    width: 34px;
+    height: 34px;
+    color: var(--churn-gold);
+}
+
+.dashboard-shot-placeholder span {
+    margin-top: 12px;
+    color: rgba(245, 239, 229, 0.7);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.case-dashboard-card h3 {
+    margin: 10px 0 0;
+    color: var(--paper);
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.case-dashboard-card p {
+    margin: 18px 0 0;
+    color: rgba(245, 239, 229, 0.72);
+    line-height: 1.7;
+}
+
+.case-dashboard-card strong {
+    display: block;
+    margin-top: 18px;
+    color: rgba(245, 239, 229, 0.9);
+    line-height: 1.55;
+}
+
 .case-hero__media--jobconnect {
     min-height: 560px;
+}
+
+.case-hero__media--jobconnect .case-hero__browser {
+    transition: transform 360ms ease, box-shadow 360ms ease, border-color 360ms ease;
+    will-change: transform;
+}
+
+.case-hero__media--jobconnect:hover .case-hero__browser:not(.case-hero__browser--float) {
+    transform: translateY(-12px) rotate(1deg) scale(1.02);
+    border-color: rgba(79, 29, 125, 0.28);
+    box-shadow: 0 38px 110px rgba(43, 19, 79, 0.26);
+}
+
+.case-hero__media--jobconnect:hover .case-hero__browser--float {
+    transform: translate(-14px, -18px) rotate(-1deg) scale(1.035);
+    border-color: rgba(79, 29, 125, 0.32);
+    box-shadow: 0 34px 95px rgba(43, 19, 79, 0.32);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .case-hero__media--jobconnect .case-hero__browser {
+        transition: none;
+    }
+
+    .case-hero__media--jobconnect:hover .case-hero__browser:not(.case-hero__browser--float) {
+        transform: none;
+    }
+
+    .case-hero__media--jobconnect:hover .case-hero__browser--float {
+        transform: rotate(-3deg);
+    }
 }
 
 .case-hero__browser {
@@ -2465,6 +3083,20 @@ button:hover .roll-text span:last-child {
     }
 }
 
+@keyframes telehealth-showcase {
+    0%,
+    10.5% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    12.5%,
+    100% {
+        opacity: 0;
+        transform: scale(0.985);
+    }
+}
+
 @keyframes marquee {
     to {
         transform: translateX(-50%);
@@ -2526,6 +3158,15 @@ button:hover .roll-text span:last-child {
     }
 
     .case-section--scenario .case-section__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-page--telehealth .case-section--scenario .case-section__grid,
+    .case-study-page--telehealth .case-role-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-dashboard-card {
         grid-template-columns: 1fr;
     }
 
@@ -2675,6 +3316,14 @@ button:hover .roll-text span:last-child {
     .case-gallery,
     .case-stack-cards {
         grid-template-columns: 1fr;
+    }
+
+    .case-churn-hero-card__kpis {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-shot-placeholder {
+        min-height: 220px;
     }
 
     .case-demo-cta {
@@ -2958,14 +3607,16 @@ button:hover .roll-text span:last-child {
     }
 
     .bekastok-shot,
-    .jobconnect-shot {
+    .jobconnect-shot,
+    .telehealth-shot {
         animation: none;
         opacity: 0;
         transform: none;
     }
 
     .bekastok-shot:first-child,
-    .jobconnect-shot:first-child {
+    .jobconnect-shot:first-child,
+    .telehealth-shot:first-child {
         opacity: 1;
     }
 }

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="TeleHealth case study by Choenyane Samuel: a private-practice healthcare web application built with Flask, Supabase, PayFast, and real-time telehealth support." />
+    <meta name="author" content="Choenyane Samuel" />
+    <title>TeleHealth Case Study | Choenyane Samuel</title>
+
+    <link rel="icon" type="image/png" href="../assets/CS_Icon.png" />
+    <link rel="apple-touch-icon" href="../assets/CS_Icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <link rel="stylesheet" href="../styleSam-revamp.css" />
+</head>
+
+<body class="case-study-page case-study-page--telehealth">
+    <header class="case-header">
+        <div class="shell case-header__inner">
+            <a class="case-brand" href="../SamChoenyane.html#work">Home</a>
+            <nav class="case-nav" aria-label="Case page contact">
+                <a href="../SamChoenyane.html#contact">
+                    <i data-lucide="send"></i>
+                    Contact Me
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-hero">
+            <div class="shell case-hero__grid">
+                <div class="case-hero__copy">
+                    <span class="case-status">Private-Practice Healthcare Platform</span>
+                    <h1>TeleHealth</h1>
+                    <p>
+                        A web-based healthcare platform for appointment booking, telehealth consultations, payments,
+                        prescriptions, sick notes, health readings, and patient records in a private-practice setting.
+                    </p>
+                    <div class="case-actions">
+                        <a class="button button--dark" href="https://youtu.be/-7O4Go2y80w" target="_blank"
+                            rel="noopener">
+                            <i data-lucide="play"></i>
+                            <span class="roll-text"><span>Watch Demo</span><span aria-hidden="true">Watch Demo</span></span>
+                        </a>
+                        <a class="button button--ghost" href="../SamChoenyane.html#work">
+                            <i data-lucide="arrow-left"></i>
+                            <span class="roll-text"><span>Back to Projects</span><span aria-hidden="true">Back to Projects</span></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="case-hero__media case-hero__media--telehealth" aria-label="TeleHealth visual preview">
+                    <img class="case-hero__browser" src="../assets/telehealth/Welcome_Page.png"
+                        alt="TeleHealth welcome page preview" />
+                    <img class="case-hero__browser case-hero__browser--float"
+                        src="../assets/telehealth/pastient_dashboard.png" alt="TeleHealth patient dashboard preview" />
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section case-section--overview section-light" id="overview">
+            <div class="shell case-section__grid">
+                <div class="case-section__heading">
+                    <p class="eyebrow">Project overview</p>
+                    <h2><span>Built for</span><span>digital</span><span>care support.</span></h2>
+                </div>
+                <div class="case-section__body">
+                    <p class="large-copy">
+                        TeleHealth supports selected healthcare services online, helping patients and practitioners
+                        manage appointments, consultations, payments, prescriptions, sick notes, and records from one
+                        connected platform.
+                    </p>
+                    <p>
+                        The project was built as a branded healthcare solution with a structure that can be expanded to
+                        support multiple healthcare practitioners. Client-specific branding and sensitive information
+                        have been removed this case study.
+                    </p>
+                    <div class="case-facts">
+                        <article>
+                            <span>Project Type</span>
+                            <strong>Web Application / Healthcare Platform</strong>
+                        </article>
+                        <article>
+                            <span>Role</span>
+                            <strong>Co-Developer / Backend &amp; Database Support</strong>
+                        </article>
+                        <article>
+                            <span>Core Stack</span>
+                            <strong>Flask, Supabase, PayFast, WebRTC</strong>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section case-section--scenario section-accent" id="real-world-context">
+            <div class="shell case-section__grid">
+                <div class="case-section__heading">
+                    <p class="eyebrow">Real-world context</p>
+                    <h2><span>Why</span><span>TeleHealth</span><span>matters.</span></h2>
+                </div>
+                <div class="case-section__body">
+                    <p class="large-copy">
+                        In a private healthcare context, not every patient interaction needs to happen physically at the
+                        practice. Follow-ups, prescription support, health reading reviews, documentation, and scheduled
+                        online consultations can often be supported digitally.
+                    </p>
+                    <p>
+                        For patients, this can reduce unnecessary travel and make follow-up care easier to manage. For
+                        practitioners, it creates a more organised way to manage appointments, patient information,
+                        payments, telehealth sessions, and consultation history.
+                    </p>
+                    <p>
+                        The platform is not positioned as a replacement for emergency care or physical consultations
+                        where examination is required. It provides a digital layer for appropriate private-practice
+                        healthcare interactions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section section-light">
+            <div class="shell case-two-column">
+                <article class="case-panel">
+                    <span>Problem</span>
+                    <h2>Healthcare admin can become scattered across tools.</h2>
+                    <p>
+                        Appointments, follow-ups, prescriptions, payments, sick notes, health readings, and patient
+                        records can become difficult to manage when they are handled manually or across separate systems.
+                    </p>
+                </article>
+                <article class="case-panel">
+                    <span>Solution</span>
+                    <h2>A central platform for selected healthcare workflows.</h2>
+                    <p>
+                        TeleHealth gives patients and practitioners one web-based system for booking appointments,
+                        joining online consultations, handling consultation payments, and managing healthcare documents.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="case-section section-dark">
+            <div class="shell">
+                <div class="case-section__heading case-section__heading--wide">
+                    <p class="eyebrow">Key features</p>
+                    <h2>Built around patients and practitioners.</h2>
+                </div>
+                <div class="case-role-grid">
+                    <article class="case-role-card">
+                        <i data-lucide="user-round"></i>
+                        <h3>Patient Features</h3>
+                        <ul>
+                            <li>Patient registration and login</li>
+                            <li>Appointment booking and dashboard views</li>
+                            <li>Telehealth consultation access</li>
+                            <li>Online consultation payments</li>
+                            <li>Prescriptions, sick notes, and health readings</li>
+                            <li>Appointment and payment notifications</li>
+                        </ul>
+                    </article>
+                    <article class="case-role-card">
+                        <i data-lucide="stethoscope"></i>
+                        <h3>Practitioner Features</h3>
+                        <ul>
+                            <li>Practitioner registration and login</li>
+                            <li>Practitioner dashboard</li>
+                            <li>Appointment and patient management</li>
+                            <li>Consultation history and patient records</li>
+                            <li>Online consultation support</li>
+                            <li>Prescription and sick note workflows</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section case-section--process section-light">
+            <div class="shell">
+                <div class="case-section__heading case-section__heading--wide">
+                    <p class="eyebrow">Development process</p>
+                    <h2>From account access to consultation flow.</h2>
+                </div>
+                <div class="case-flow-grid">
+                    <article class="case-flow-card">
+                        <span>Patient flow</span>
+                        <h3>From login to consultation.</h3>
+                        <ol>
+                            <li>Register or login</li>
+                            <li>View dashboard</li>
+                            <li>Book appointment</li>
+                            <li>Pay consultation fee</li>
+                            <li>Join telehealth session</li>
+                            <li>Access documents and records</li>
+                        </ol>
+                    </article>
+                    <article class="case-flow-card">
+                        <span>Practitioner flow</span>
+                        <h3>From schedule to care record.</h3>
+                        <ol>
+                            <li>Login securely</li>
+                            <li>Manage appointment slots</li>
+                            <li>View patient details</li>
+                            <li>Conduct online consultation</li>
+                            <li>Create prescriptions or sick notes</li>
+                            <li>Review payments and history</li>
+                        </ol>
+                    </article>
+                    <article class="case-flow-card">
+                        <span>System flow</span>
+                        <h3>From request to protected data.</h3>
+                        <ol>
+                            <li>Validate user role</li>
+                            <li>Protect routes and sessions</li>
+                            <li>Store healthcare records</li>
+                            <li>Handle PayFast updates</li>
+                            <li>Support real-time calls</li>
+                            <li>Send notifications</li>
+                        </ol>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section case-section--stack section-light" id="tech-stack">
+            <div class="shell case-section__grid">
+                <div class="case-section__heading">
+                    <p class="eyebrow">Tech stack</p>
+                    <h2><span>How</span><span>TeleHealth</span><span>was built.</span></h2>
+                </div>
+                <div class="case-stack-layout">
+                    <p class="case-stack-intro">
+                        TeleHealth was built as a Flask and Supabase web application with server-rendered pages,
+                        database-backed healthcare workflows, online payments, and real-time telehealth support.
+                    </p>
+                    <div class="case-stack-cards">
+                        <article>
+                            <small>01 Frontend</small>
+                            <h3>HTML + CSS + JavaScript</h3>
+                            <p>Built the web interface, dashboard screens, forms, charts, and patient-facing flows.</p>
+                        </article>
+                        <article>
+                            <small>02 Backend</small>
+                            <h3>Python Flask</h3>
+                            <p>Supported routes, sessions, authentication flow, business logic, and protected pages.</p>
+                        </article>
+                        <article>
+                            <small>03 Database &amp; Services</small>
+                            <h3>Supabase + PostgreSQL</h3>
+                            <p>Stored healthcare-related data and supported database-driven workflows.</p>
+                        </article>
+                        <article>
+                            <small>04 Payments &amp; Real Time</small>
+                            <h3>PayFast + SocketIO + WebRTC</h3>
+                            <p>Supported consultation payments, payment status handling, and online consultation rooms.</p>
+                        </article>
+                    </div>
+                    <div class="case-stack">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>Supabase</span>
+                        <span>PostgreSQL</span>
+                        <span>PayFast</span>
+                        <span>Socket.IO</span>
+                        <span>WebRTC</span>
+                        <span>Azure Communication Email</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section section-light" id="demo">
+            <div class="shell">
+                <div class="case-section__heading case-section__heading--wide">
+                    <p class="eyebrow">Screenshots / Demo</p>
+                    <h2>Current screens from the project.</h2>
+                </div>
+                <div class="case-demo-cta">
+                    <div>
+                        <span>Screen walkthrough</span>
+                        <p>
+                            These screens show the current patient and practitioner flows, including the landing page,
+                            dashboard, telehealth area, appointment slots, and payment screen.
+                        </p>
+                    </div>
+                    <a class="button button--dark" href="https://youtu.be/-7O4Go2y80w" target="_blank"
+                        rel="noopener">
+                        <i data-lucide="play"></i>
+                        <span class="roll-text"><span>Watch Demo</span><span aria-hidden="true">Watch Demo</span></span>
+                    </a>
+                </div>
+                <div class="case-gallery case-gallery--web">
+                    <figure>
+                        <img src="../assets/telehealth/New_Logo.png" alt="TeleHealth logo" />
+                        <figcaption>Project logo</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/Welcome_Page.png" alt="TeleHealth welcome page" />
+                        <figcaption>Welcome page</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/login_page.png" alt="TeleHealth login page" />
+                        <figcaption>Login page</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/patient_register.png" alt="TeleHealth patient registration page" />
+                        <figcaption>Patient registration</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/patient_profile.png" alt="TeleHealth patient profile page" />
+                        <figcaption>Patient profile 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/patient_profile)part2.png" alt="TeleHealth patient profile page part two" />
+                        <figcaption>Patient profile 2</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/pastient_dashboard.png" alt="TeleHealth patient dashboard" />
+                        <figcaption>Patient dashboard</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/patient_appointment.png" alt="TeleHealth patient appointment page" />
+                        <figcaption>Patient appointments</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/patient_book_appointment.png" alt="TeleHealth patient book appointment page" />
+                        <figcaption>Book appointment 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/patient_book_appointment_part2.png" alt="TeleHealth patient book appointment page part two" />
+                        <figcaption>Book appointment 2</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/payment_page.png" alt="TeleHealth payment page" />
+                        <figcaption>Payment page</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/patient_telehealth.png" alt="TeleHealth patient telehealth page" />
+                        <figcaption>Patient telehealth</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/patient_prescriptions.png" alt="TeleHealth patient prescriptions page" />
+                        <figcaption>Patient prescriptions</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/patient%20sicknotes.png" alt="TeleHealth patient sick notes page" />
+                        <figcaption>Patient sick notes</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/patient_records.png" alt="TeleHealth patient records page" />
+                        <figcaption>Patient records</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitioner_register_part1.png" alt="TeleHealth practitioner registration page part one" />
+                        <figcaption>Practitioner registration 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitioner_register_part2.png" alt="TeleHealth practitioner registration page part two" />
+                        <figcaption>Practitioner registration 2</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitioner_before_approval.png" alt="TeleHealth practitioner before approval page" />
+                        <figcaption>Before approval</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitioner_profile.png" alt="TeleHealth practitioner profile page" />
+                        <figcaption>Practitioner profile 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitioner_profile_part2.png" alt="TeleHealth practitioner profile page part two" />
+                        <figcaption>Practitioner profile 2</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitoner_dashboard.png" alt="TeleHealth practitioner dashboard" />
+                        <figcaption>Practitioner dashboard</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitoner_appointments.png" alt="TeleHealth practitioner appointments page" />
+                        <figcaption>Practitioner appointments</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practioner_setting_appointments_slots.png"
+                            alt="TeleHealth practitioner appointment settings" />
+                        <figcaption>Appointment slots</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitoner_telehealth.png" alt="TeleHealth practitioner telehealth page" />
+                        <figcaption>Practitioner telehealth</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitoner_messages.png" alt="TeleHealth practitioner messages page" />
+                        <figcaption>Practitioner messages</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitoner_biilling.png" alt="TeleHealth practitioner billing page" />
+                        <figcaption>Practitioner billing</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitoner_prescription.png" alt="TeleHealth practitioner prescription page" />
+                        <figcaption>Prescription 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitioner_prescription__part2.png" alt="TeleHealth practitioner prescription page part two" />
+                        <figcaption>Prescription 2</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitioner_create_sicknote.png" alt="TeleHealth practitioner create sick note page" />
+                        <figcaption>Create sick note</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/telehealth/practitioner_reports.png" alt="TeleHealth practitioner reports page" />
+                        <figcaption>Practitioner reports</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section section-accent">
+            <div class="shell case-two-column">
+                <article class="case-panel">
+                    <span>My role</span>
+                    <h2>Co-developer with backend and database involvement.</h2>
+                    <p>
+                        My work focused on backend structure, Supabase integration, authentication flow, protected
+                        routes, database-driven workflows, PayFast payment handling, testing, and debugging key system
+                        flows.
+                    </p>
+                </article>
+                <article class="case-panel">
+                    <span>Outcome</span>
+                    <h2>A functional healthcare platform foundation.</h2>
+                    <p>
+                        The project demonstrates practical experience in full-stack web development, healthcare data
+                        handling, payment integration, real-time communication, and security-aware system design.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="case-section section-light">
+            <div class="shell case-two-column">
+                <article class="case-panel">
+                    <span>Limitations</span>
+                    <h2>Further review would be needed before wider healthcare use.</h2>
+                    <p>
+                        A production healthcare system would need deeper security testing, consent workflows, audit
+                        logging, backup planning, broader device testing, and compliance review before wider public use.
+                    </p>
+                </article>
+                <article class="case-panel">
+                    <span>Future improvements</span>
+                    <h2>Built with room for stronger practice support.</h2>
+                    <p>
+                        Future improvements could include multi-practitioner onboarding, stronger consent management,
+                        reminders, PDF generation, secure uploads, improved call quality handling, and advanced reports.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="case-section section-dark">
+            <div class="shell case-closing">
+                <p class="eyebrow">Next step</p>
+                <h2>Review the demo screens or return to the project list.</h2>
+                <div class="case-actions">
+                    <a class="button button--light" href="https://youtu.be/-7O4Go2y80w" target="_blank"
+                        rel="noopener">
+                        <i data-lucide="play"></i>
+                        <span class="roll-text"><span>Watch Demo</span><span aria-hidden="true">Watch Demo</span></span>
+                    </a>
+                    <a class="button" href="../SamChoenyane.html#work">
+                        <i data-lucide="arrow-left"></i>
+                        <span class="roll-text"><span>Back to Projects</span><span aria-hidden="true">Back to Projects</span></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>

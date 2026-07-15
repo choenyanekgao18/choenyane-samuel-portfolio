@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Customer Churn Dashboard case study by Choenyane Samuel: a course-based Power BI customer analytics project using a DataCamp churn dataset." />
+    <meta name="author" content="Choenyane Samuel" />
+    <title>Customer Churn Dashboard Case Study | Choenyane Samuel</title>
+
+    <link rel="icon" type="image/png" href="../assets/CS_Icon.png" />
+    <link rel="apple-touch-icon" href="../assets/CS_Icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <link rel="stylesheet" href="../styleSam-revamp.css" />
+</head>
+
+<body class="case-study-page case-study-page--churn">
+    <header class="case-header">
+        <div class="shell case-header__inner">
+            <a class="case-brand" href="../SamChoenyane.html#work">Home</a>
+            <nav class="case-nav" aria-label="Case page contact">
+                <a href="../SamChoenyane.html#contact">
+                    <i data-lucide="send"></i>
+                    Contact Me
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-hero">
+            <div class="shell case-hero__grid">
+                <div class="case-hero__copy">
+                    <span class="case-status">Course-Based Analytics Project</span>
+                    <h1>Customer Churn Dashboard</h1>
+                    <p>
+                        A Power BI analytics project using a DataCamp customer churn dataset to explore churn patterns,
+                        customer behaviour, contract types, billing trends, and retention-focused business insights.
+                    </p>
+                    <div class="case-actions">
+                        <a class="button button--dark" href="#dashboard-pages">
+                            <i data-lucide="layout-dashboard"></i>
+                            <span class="roll-text"><span>View Dashboard Pages</span><span aria-hidden="true">View Dashboard Pages</span></span>
+                        </a>
+                        <a class="button button--ghost" href="../SamChoenyane.html#work">
+                            <i data-lucide="arrow-left"></i>
+                            <span class="roll-text"><span>Back to Projects</span><span aria-hidden="true">Back to Projects</span></span>
+                        </a>
+                    </div>
+                    <div class="case-hero-tags" aria-label="Tools used">
+                        <span>Power BI</span>
+                        <span>Power Query</span>
+                        <span>DAX</span>
+                        <span>Data Visualisation</span>
+                    </div>
+                </div>
+
+                <div class="case-hero__media case-hero__media--churn" aria-label="Customer churn dashboard preview">
+                    <div class="case-churn-hero-card">
+                        <div class="case-churn-hero-card__header">
+                            <span>Power BI</span>
+                            <strong>Customer Churn Analysis</strong>
+                        </div>
+                        <div class="case-churn-hero-card__kpis">
+                            <article><span>Churn Rate</span><strong>KPI View</strong></article>
+                            <article><span>Monthly Charges</span><strong>Billing Trend</strong></article>
+                            <article><span>Contract Type</span><strong>Segment Filter</strong></article>
+                            <article><span>Customer Tenure</span><strong>Loyalty View</strong></article>
+                        </div>
+                        <div class="case-churn-hero-card__chart">
+                            <i style="--bar: 72%"></i>
+                            <i style="--bar: 48%"></i>
+                            <i style="--bar: 64%"></i>
+                            <i style="--bar: 34%"></i>
+                            <i style="--bar: 58%"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section case-section--overview section-light" id="overview">
+            <div class="shell case-section__grid">
+                <div class="case-section__heading">
+                    <p class="eyebrow">Project overview</p>
+                    <h2><span>Turning</span><span>customer data</span><span>into insight.</span></h2>
+                </div>
+                <div class="case-section__body">
+                    <p class="large-copy">
+                        This project analyses customer churn using Power BI. The goal was to prepare and clean the
+                        dataset, create useful DAX measures, and design dashboard pages that help identify churn
+                        patterns, high-risk customer groups, and areas where retention efforts may be needed.
+                    </p>
+                    <p>
+                        This was a course-based analytics project using a DataCamp-provided customer churn dataset. The
+                        focus was on data cleaning, dashboard design, DAX measures, and communicating business insights
+                        clearly through interactive visuals.
+                    </p>
+                    <div class="case-facts">
+                        <article>
+                            <span>Project Type</span>
+                            <strong>Power BI Dashboard</strong>
+                        </article>
+                        <article>
+                            <span>Dataset Source</span>
+                            <strong>DataCamp Dataset</strong>
+                        </article>
+                        <article>
+                            <span>Focus</span>
+                            <strong>Churn &amp; Retention Insights</strong>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section section-light">
+            <div class="shell case-two-column">
+                <article class="case-panel">
+                    <span>Problem</span>
+                    <h2>Churn is more than who left.</h2>
+                    <p>
+                        Customer churn becomes useful when it explains the patterns behind customer loss. The analysis needed to
+                        make it easier to compare churn across contract type, data usage, monthly charges, payment method,
+                        and customer behaviour.
+                    </p>
+                </article>
+                <article class="case-panel">
+                    <span>Objective</span>
+                    <h2>Build a dashboard that explains churn risk.</h2>
+                    <p>
+                        The objective was to clean and model the data, create useful measures, and present dashboard pages
+                        that help users understand churn risk, compare customer segments, and identify areas where retention
+                        efforts may be needed.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="case-section case-section--stack section-light" id="process">
+            <div class="shell case-section__grid">
+                <div class="case-section__heading">
+                    <p class="eyebrow">Analysis process</p>
+                    <h2><span>From data</span><span>to dashboard.</span></h2>
+                </div>
+                <div class="case-stack-layout">
+                    <p class="case-stack-intro">
+                        The project followed a clear analysis process: import the dataset, clean and transform it in Power
+                        Query, build the data model, create DAX measures, design focused dashboard pages, and communicate
+                        the key business insights.
+                    </p>
+                    <div class="case-stack-cards">
+                        <article>
+                            <small>01 Data Preparation</small>
+                            <h3>Power Query</h3>
+                            <p>
+                                Cleaned and transformed the dataset by removing unnecessary rows and columns, fixing blank
+                                or missing values, removing duplicates, correcting inconsistent formatting, replacing
+                                incorrect values, and setting correct data types.
+                            </p>
+                        </article>
+                        <article>
+                            <small>02 Data Modelling</small>
+                            <h3>Relationships</h3>
+                            <p>
+                                Prepared the data model by organising the tables and relationships needed to support
+                                accurate filtering, segmentation, and dashboard analysis.
+                            </p>
+                        </article>
+                        <article>
+                            <small>03 DAX Measures</small>
+                            <h3>Measures</h3>
+                            <p>
+                                Created DAX measures to calculate key values used in the report, such as churn-related
+                                totals, customer counts, contract comparisons, and dashboard-level KPIs.
+                            </p>
+                        </article>
+                        <article>
+                            <small>04 Dashboard Design</small>
+                            <h3>Focused Pages</h3>
+                            <p>
+                                Designed each dashboard page around one main analytical question to reduce cognitive load
+                                and make the report easier to scan, compare, and understand.
+                            </p>
+                        </article>
+                        <article>
+                            <small>05 Insight Communication</small>
+                            <h3>Business Insights</h3>
+                            <p>
+                                Used visuals, slicers, cards, and summaries to communicate what the data suggests about
+                                churn risk, customer behaviour, and retention opportunities.
+                            </p>
+                        </article>
+                    </div>
+                    <div class="case-stack">
+                        <span>Power BI</span>
+                        <span>Power Query</span>
+                        <span>DAX</span>
+                        <span>Data Cleaning</span>
+                        <span>Data Modelling</span>
+                        <span>Churn Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section section-dark" id="dashboard-pages">
+            <div class="shell">
+                <div class="case-section__heading case-section__heading--wide">
+                    <p class="eyebrow">Dashboard pages</p>
+                    <h2>Each screenshot will sit beside the insight it supports.</h2>
+                </div>
+                <div class="case-dashboard-grid">
+                    <article class="case-dashboard-card">
+                        <div class="dashboard-shot">
+                            <img src="../assets/ChurnedCustomer/01-overview.png" alt="Customer churn overview dashboard page" />
+                        </div>
+                        <div>
+                            <span>Dashboard 01</span>
+                            <h3>Churn Overview</h3>
+                            <p>
+                                This overview page provides a high-level summary of customer churn performance. It
+                                highlights the overall churn rate, total number of customers, number of churned customers,
+                                common churn reasons, and churn distribution by state.  The purpose of this page is to give 
+                                users a quick understanding of the size of the churn problem.
+                            </p>
+                            <strong>
+                                Key insight: 26.86% of customers churned, with 1,796 churned customers out of 6,687
+                                customers. Churn is visible through total volume, churn reasons, and geographic
+                                distribution, helping guide deeper analysis into where customer loss may be concentrated.
+                            </strong>
+                        </div>
+                    </article>
+                    <article class="case-dashboard-card">
+                        <div class="dashboard-shot">
+                            <img src="../assets/ChurnedCustomer/02-customer-segment.png" alt="Customer segments and churn risk dashboard page" />
+                        </div>
+                        <div>
+                            <span>Dashboard 02</span>
+                            <h3>Customer Segments &amp; Churn Risk</h3>
+                            <p>
+                                This dashboard page explores how churn risk appears across different customer segments,
+                                with a focus on age groups, gender, and account length. The main visual compares the
+                                number of customers in each age group with the churn rate, making it easier to see whether
+                                churn risk changes as customers get older.
+                            </p>
+                            <p>
+                                The page also includes an account length filter, which allows the viewer to analyse churn
+                                patterns based on how long customers have been with the company. Gender is included to
+                                check whether churned customers are concentrated in a specific gender group, while the
+                                highest churn age card highlights the age group with the strongest churn count or churn
+                                risk.
+                            </p>
+                            <strong>
+                                Key insight: churn risk is more visible in certain age groups, especially where the churn
+                                rate increases even if the number of customers is lower. Gender appears more balanced in
+                                this view, meaning it may not be the strongest churn factor on its own. The highest churn
+                                age card helps draw attention to the customer age group that may need closer retention
+                                focus.
+                            </strong>
+                        </div>
+                    </article>
+                    <article class="case-dashboard-card">
+                        <div class="dashboard-shot">
+                            <img src="../assets/ChurnedCustomer/03-Churn-reasons.png" alt="Customer churn reasons dashboard page" />
+                        </div>
+                        <div>
+                            <span>Dashboard 03</span>
+                            <h3>Churn Reasons &amp; Retention Drivers</h3>
+                            <p>
+                                This dashboard page focuses on the reasons behind customer churn. It breaks churn down by
+                                detailed churn reasons and broader churn categories, helping users move beyond the overall
+                                churn rate and understand what may be driving customer loss.
+                            </p>
+                            <p>
+                                The main churn reasons show whether customers are leaving because of competitor offers,
+                                device quality, support experience, price, service dissatisfaction, or other issues. A
+                                contract type filter allows the viewer to check whether churn reasons change across
+                                different customer contract groups.
+                            </p>
+                            <strong>
+                                Key insight: competitor-related reasons appear strongly among the top churn drivers,
+                                especially better offers and better devices. This suggests retention may need to focus on
+                                competitive pricing, value offers, device options, and service experience rather than only
+                                general churn reduction.
+                            </strong>
+                        </div>
+                    </article>
+                    <article class="case-dashboard-card">
+                        <div class="dashboard-shot">
+                            <img src="../assets/ChurnedCustomer/04-Last-Dashboard.png" alt="Contract payment and account length churn dashboard page" />
+                        </div>
+                        <div>
+                            <span>Dashboard 04</span>
+                            <h3>Contract, Payment &amp; Account Length</h3>
+                            <p>
+                                This dashboard page analyses churn patterns by contract type, payment method, and account
+                                length. It helps show whether churn risk is linked to how long customers have been with the
+                                company, the type of contract they are on, and how they make payments.
+                            </p>
+                            <p>
+                                The account length visual shows how churn changes over the customer lifecycle, while the
+                                contract and payment visuals help compare churn behaviour across different customer groups.
+                                This supports retention-focused decision-making by identifying which customer arrangements
+                                may need more attention.
+                            </p>
+                            <strong>
+                                Key insight: churn appears higher among customers with shorter account lengths, suggesting
+                                that early-stage customers may need stronger onboarding and retention support.
+                                Month-to-month contracts also appear important because flexible contract customers may be
+                                easier to lose.
+                            </strong>
+                            <p>
+                                <strong>Recommendation:</strong> the business should focus on improving early customer
+                                experience, monitoring month-to-month customers closely, and offering retention incentives
+                                such as better support, loyalty offers, or contract upgrade benefits.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section section-light">
+            <div class="shell case-two-column">
+                <article class="case-panel">
+                    <span>Key insights</span>
+                    <h2>Designed to support retention thinking.</h2>
+                    <p>
+                        The dashboard focuses on explaining churn by contract behaviour, billing patterns, usage, and
+                        customer attributes. The purpose is not only to show churn numbers, but to help identify where a
+                        business could focus retention attention.
+                    </p>
+                </article>
+                <article class="case-panel">
+                    <span>What I learned</span>
+                    <h2>Analytics is also communication design.</h2>
+                    <p>
+                        This project strengthened my understanding of data cleaning, Power Query, DAX, dashboard layout,
+                        cognitive load, slicers, and turning raw data into a story that a business user can understand.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="case-section section-accent">
+            <div class="shell case-two-column">
+                <article class="case-panel">
+                    <span>Challenges</span>
+                    <h2>Making the dashboard clear, not crowded.</h2>
+                    <p>
+                        The main challenge was choosing visuals and measures that support the analysis without overloading
+                        the page. Each dashboard page should answer a specific question instead of trying to show every
+                        possible chart at once.
+                    </p>
+                </article>
+                <article class="case-panel">
+                    <span>Future improvements</span>
+                    <h2>Add stronger storytelling with the final screenshots.</h2>
+                    <p>
+                        Once the dashboard screenshots are added, each page can be paired with a short explanation of what
+                        it shows, why it matters, and the key insight a viewer should take from it.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="case-section section-dark">
+            <div class="shell case-closing">
+                <p class="eyebrow">Next step</p>
+                <h2>Review the dashboard structure or return to the project list.</h2>
+                <div class="case-actions">
+                    <a class="button button--light" href="#dashboard-pages">
+                        <i data-lucide="layout-dashboard"></i>
+                        <span class="roll-text"><span>View Dashboard Pages</span><span aria-hidden="true">View Dashboard Pages</span></span>
+                    </a>
+                    <a class="button" href="../SamChoenyane.html#work">
+                        <i data-lucide="arrow-left"></i>
+                        <span class="roll-text"><span>Back to Projects</span><span aria-hidden="true">Back to Projects</span></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>
